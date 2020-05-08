@@ -3,6 +3,43 @@ var quotes;
 // Write your code here
 
 
+function getRandomNumber() {
+    return Math.floor(Math.random()*77);
+}
+
+function getRandomAuthor() {
+    let authorQuote = quotes.map(elem => {return elem.quoteAuthor});
+    let randomAuthor = getRandomNumber();
+    let authorGenerated = authorQuote[randomAuthor];
+    return authorGenerated;
+}
+
+function getRandomQuote() {
+    let textQuote = quotes.map( elem => {return elem.quoteText});
+    // let authorQuote = quotes.map(elem => {return elem.quoteAuthor})
+    let randomQuote= getRandomNumber();
+    let quoteGenerated = textQuote[randomQuote];
+    return quoteGenerated;
+}
+
+function handleEvent(event) {
+    console.log(handleEvent)
+    if(event.keyCode == 32) {
+        let subHeading= document.querySelector(".subHeading");
+        subHeading.innerText = getRandomQuote();
+        
+        let para= document.querySelector(".para");
+        para.innerHTML= getRandomAuthor();
+        
+    }
+}
+
+
+document.addEventListener("keyup", handleEvent) 
+
+
+
+
 
 quotes = [
     {

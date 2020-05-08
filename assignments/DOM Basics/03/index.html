@@ -38,6 +38,37 @@
     const h1 = document.getElementsByTagName("h1")[0];
     const p = document.getElementsByTagName("p")[0];
     const ul = document.getElementsByTagName("ul")[0];
-    // Your code goes here
+    // // Your code goes here
+
+    ////////////////1/////////////////
+    ul.firstElementChild.style.color = "green";
+    
+    ////////////////////////2////////////////////
+
+    let list= document.querySelectorAll("li")
+    list.forEach(elem => {elem.style.color= "blue"});
+
+    /////////////////////3//////////////////////////
+
+    let lilist = document.querySelectorAll("li");
+    let lilist_item = lilist.length;
+    lilist[lilist_item-1].style.color = "red"
+
+    //////////////4///////////////////////
+
+    let lilist1 = document.querySelectorAll("li");
+    let lilist_item1 = lilist1.length;
+    lilist1[lilist_item1-2].style.color = "orange"
+
+    ////////////////5/////////////////////////
+
+    
+    ul.firstElementChild.style.backgroundColor = "coral"
+    ul.lastElementChild.style.backgroundColor= "aquamarine"
+
+
+
+    
+
   </script>
 </html>
