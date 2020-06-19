@@ -12,5 +12,18 @@
       <li>Favorites: <span id="favorites"></span></li>
       <li>Hometown: <span id="hometown"></span></li>
     </ul>
+    <script>
+      document.body.style.fontFamily= "Arial, sans-serif";
+      document.querySelector("#nickname").innerHTML= "Manish";
+      document.querySelector("#favorites").innerHTML= "Real Madrid";
+      document.querySelector("#hometown").innerHTML="Nashik";
+
+      document.querySelectorAll("li").forEach(elem => {elem.className = "listitem"});
+      document.querySelectorAll(".listitem").forEach(x => {x.style.color= "red"});
+
+      let pic = document.createElement("img");
+      pic.src= "https://www.instagram.com/p/B1yQA46nrjNzsgNx1ykdey-OQw0X6TIG9EdnY40/?igshid=od1h741ncjqb";
+      document.body.append(pic);
+    </script>
   </body>
 </html>

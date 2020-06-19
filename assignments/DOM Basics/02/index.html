@@ -47,6 +47,44 @@
     <div class="demo-query-all">Access me by query all (2)</div>
     <script>
       // your code goes here
+      ///////////1////////
+      let demo = document.getElementById("demo");
+      demo.style.border= "1px solid purple";
+
+      ////////////////2//////////////////
+      let demoClass = document.querySelectorAll(".demo");
+      demoClass.forEach(element => {
+        element.style.border = "1px solid orange"
+      });
+
+      // let demoClass = document.getElementsByClassName("demo");
+      // demoClass.forEach(elem => {
+      //   elem.style.border = "1px solid orange"}); 
+      // Why this is not working
+
+      ////////////////3//////////////////////
+
+      // let articles = document.querySelectorAll("article");
+      // console.log(articles);
+      // articles[0].style.border="1px solid blue";
+
+      // let articles = document.getElementsByTagName("article");
+      // articles.style.border="1px solid blue";
+
+
+      let articles = document.querySelectorAll("article");
+      articles.forEach(elem => {elem.style.border="1px solid blue"});
+
+      /////////////4////////////////////
+
+      let demo_query = document.querySelector("#demo-query");
+      demo_query.style.border= "1px solid grey"
+
+      ///////////////5/////////////////
+
+      let demo_query_all = document.querySelectorAll(".demo-query-all");
+      demo_query_all.forEach(elem => {elem.style.border= "1px solid green"});
+
     </script>
   </body>
 </html>
